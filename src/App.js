@@ -13,6 +13,7 @@ function App() {
   const [gameStarted, setGameStarted] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
   const [currentScores, setCurrentScores] = useState({ p1: '', p2: '' });
+  const [gameOver, setGameOver] = useState(false);
 
   const rounds = ['3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A', '2'];
 
@@ -35,7 +36,7 @@ function App() {
 
     if (round + 1 >= rounds.length) {
       setModalVisible(false);
-      setGameStarted(false);
+      setGameOver(true);
     } else {
       setModalVisible(false);
     }
@@ -125,8 +126,10 @@ function App() {
               ))}
               <tr>
                 <td>Total</td>
-                <td>{scores.reduce((total, score) => total + score.p1, 0)}</td>
-                <td>{scores.reduce((total, score) => total + score.p2, 0)}</td>
+                <td>{scores.reduce((total, score) => total + score.p1, 0)}
+                {scores.reduce((total, score) => total + score.p1, 0) > scores.reduce((total, score) => total + score.p2, 0) ? '' : ' ⭐'}</td>
+                <td>{scores.reduce((total, score) => total + score.p2, 0)}
+                {scores.reduce((total, score) => total + score.p2, 0) > scores.reduce((total, score) => total + score.p1, 0) ? '' : ' ⭐'}</td>
               </tr>
             </tbody>
           </table>
