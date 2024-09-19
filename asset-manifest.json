@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/jin-rummy-score-app/static/css/main.df674afe.css",
+    "main.js": "/jin-rummy-score-app/static/js/main.3e0a6022.js",
+    "index.html": "/jin-rummy-score-app/index.html",
+    "main.df674afe.css.map": "/jin-rummy-score-app/static/css/main.df674afe.css.map",
+    "main.3e0a6022.js.map": "/jin-rummy-score-app/static/js/main.3e0a6022.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df674afe.css",
+    "static/js/main.3e0a6022.js"
+  ]
+}
